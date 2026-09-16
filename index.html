@@ -207,7 +207,7 @@ svg{display:block}
     try {
       const url = new URL(window.location.href);
       url.searchParams.set('Role', tallyRole);
-      url.searchParams.set('contact', email);
+      url.searchParams.set('email', email);
       window.history.replaceState({}, '', url.toString());
     } catch (e) {}
 
@@ -235,7 +235,7 @@ svg{display:block}
     // published form rather than silently returning them to the hero.
     setTimeout(function () {
       if (!document.querySelector('.tally-popup')) {
-        const directUrl = 'https://tally.so/r/q49bg7?Role=' + encodeURIComponent(tallyRole) + '&contact=' + encodeURIComponent(email);
+        const directUrl = 'https://tally.so/r/q49bg7?Role=' + encodeURIComponent(tallyRole) + '&email=' + encodeURIComponent(email);
         window.location.href = directUrl;
       }
     }, 900);
